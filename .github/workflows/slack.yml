@@ -1,0 +1,51 @@
+name : Slack Testing
+
+on: [push]
+
+jobs:
+  slack-testing-1:
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+            shell: bash
+    steps:
+
+        - name: git checkout
+          uses: actions/checkout@v3
+
+        - name: create a text file
+          run: touch f1.txt
+
+        - name: listing the files
+          run: ls -l
+
+  slack-testing-2:
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+            shell: bash
+    steps:
+
+        - name: git checkout
+          uses: actions/checkout@v3
+
+        - name: create a text file
+          run: touch f2.txt
+
+        - name: listing the files
+          run: ls -l
+
+  slack-testing-3:
+    runs-on: ubuntu-latest
+    defaults:
+        run:
+            shell: bash
+    steps:  
+        - name: git checkout
+          uses: actions/checkout@v3
+
+        - name: create a text file
+          run: touch f3.txt  
+
+        - name: listing the files
+          run: ls -l
